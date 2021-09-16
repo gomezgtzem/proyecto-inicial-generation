@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "twit": "^2.2.11"
+  },
+  "name": "proyecto-inicial-generation",
+  "description": "Documento inicial del repositorio proyecto-inicial-generation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gomezgtzem/proyecto-inicial-generation.git"
+  },
+  "author": "gomezgtz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gomezgtzem/proyecto-inicial-generation/issues"
+  },
+  "homepage": "https://github.com/gomezgtzem/proyecto-inicial-generation#readme"
+}
