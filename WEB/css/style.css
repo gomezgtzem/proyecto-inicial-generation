@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: #f4f4f4;
+}
+header {
+  width: 100%;
+  height: 45vh;
+  border: 2px solid green;
+  background: #f68348;
+  border-radius: 0 0 100px 100px;
+  /* background: linear-gradient(50deg,#FDC13C 50%, #EE3653 100%); */
+}
+main {
+  width: 45%;
+  height: 50vh;
+  border: 2px solid orange;
+  margin: 0 auto;
+}
+main .formulario {
+  min-width: 100%;
+  min-height: 100%;
+}
+main .formulario fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: #f68348;
+  border-image: initial;
+  text-align: center;
+  border-radius: 55px;
+}
+main .formulario fieldset .fields {
+  margin: 5vh auto;
+}
+main .formulario fieldset legend {
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 23px;
+  color: #762dc4;
+}
+main .formulario fieldset .fields input[type="text" i] {
+  padding: 1px 2px;
+  font-size: 35px;
+  text-align: center;
+  border-radius: 23px;
+  border-color: #762dc4;
+	color: #f68348;
+}
+main .formulario fieldset .fields input[type="text" i]::placeholder {
+  color: #762dc4;
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  border: 2px solid blue;
+}
+main .formulario fieldset input[type="button" i] {
+  padding: 1px 2px;
+    width: 50%;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 23px;
+    background-color: #762dc4;
+    color: #f4f4f4;
+}
