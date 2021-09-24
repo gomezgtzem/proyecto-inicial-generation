@@ -14,20 +14,23 @@
 </head>
 
 <body>
-  <header class="mb-4">
+  <header class="mb-6 fixed-top" id="header">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
       <nav class="navbar navbar-expand-lg navbar-light rounded color-navbar">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#header">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#carousel">Carrusel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cards-habilidades">Habilidades</a>
             </li>
           </ul>
         </div>
@@ -37,8 +40,8 @@
 
   <!-- Seccion del carrusel -->
 
-  <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 w-100">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 w-100 mt-5 p3 mh-100">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -50,14 +53,15 @@
           <div class="carousel-caption d-md-block">
             <!-- Imagen de perfil -->
             <div class="container mx-auto">
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <img src="./img/profile.jpg" class="d-none d-md-block w-100">
+              <div class="row align-items-center">
+                <div class="d-xs-none col col-lg-6 col-md-0 col-sm-0 col-xs-0">
+                  <img src="./img/profile.jpg" class="d-none d-sm-block self-align-center">
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                  <p class="d-xs-none">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex excepturi pariatur,
-                    velit non, nemo est iusto qui quia optio quam ipsa fugit vitae neque rerum, quos aliquam sequi
-                    maxime earum!</p>
+                <div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <p class="d-xs-none descrip-profile">Soy un Desarrollador Web con 4 años de experiencia en desarrollo
+                    de aplicaciones e integración de APIs Web, he manejado JavaScript y algunos frameworks como Angular,
+                    Vue, Node y Express. Tengo conocimiento en desarrollo de APIs con NodeJS, mantenimiento de servicios
+                    y aplicaciones.</p>
                 </div>
               </div>
             </div>
@@ -93,8 +97,11 @@
 
   <!-- Cards debajo del carrusel  -->
 
-  <section class="container">
+  <section class="container" id="cards-habilidades">
     <div class="row">
+      <h1 class="display 1 col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 mx-auto text-center">
+        Habilidades de Emmanuel Gómez
+      </h1>
       <div class="card col-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3 mx-auto">
         <div class="card-body">
           <h5 class="card-title">Habilidades técnicas </h5>
@@ -129,15 +136,18 @@
     </div>
     <!-- Descargar CV -->
     <p>Descarga mi CV<p>
-      <a href="./files/resume.jpg" download="resume" target="_blank">
-        <i class="bi bi-file-earmark-arrow-down"></i>
-      </a>
-      <div class="spinner-grow" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+        <a href="./files/resume.jpg" download="resume" target="_blank">
+          <i class="bi bi-file-earmark-arrow-down"></i>
+        </a>
+        <div class="spinner-grow" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
   </section>
   <!-- Formulario contacto -->
   <section class="container mt-5 mb-5 border border-warning">
+    <h1 class="display 1 col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3 mx-auto text-center">
+      Contáctame para más información
+    </h1>
     <form class="p-3">
       <div class="form-group">
         <label for="exampleInputEmail1">Correo</label>
@@ -160,11 +170,14 @@
 
   <!-- Buscador de hashtag en twitter -->
 
-  <section class="col-12">
-    <nav class="navbar navbar-light bg-info col-8">
-      <form class="form-inline" id="searchHashtag">
-        <input class="form-control mr-sm-2" id="hashtag" type="search" placeholder="Buscar hashtag" aria-label="Search">
-        <button class="btn my-2 my-sm-0 text-white" type="submit"><i class="bi bi-search"></i></button>
+  <section class="col-12 ">
+    <h1 class="display 1 col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto text-center">
+      Buscador de hashtag
+    </h1>
+    <nav class="navbar navbar-light bg-info col-12">
+      <form class="text-center form-inline" id="searchHashtag">
+        <input class="form-control mr-sm-2 mw-100" id="hashtag" type="search" placeholder="Buscar hashtag" aria-label="Search">
+        <button class="btn text-white" type="submit"><i class="bi bi-search"></i></button>
       </form>
     </nav>
   </section>
