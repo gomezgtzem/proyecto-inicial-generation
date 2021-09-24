@@ -29,12 +29,12 @@ app.get("/hashtag", (req, res) => {
 });
 
 // Cuando te hagan un post
-app.post('/hashtag', (req, res) => {
+app.post("/hashtag", (req, res) => {
   let transaction = req.body;
   hashtagArray.push(transaction);
   res.send(JSON.stringify("Hashtag guardado"));
-  for(let i=0; i<hashtagArray.length; i++) {
-  console.log(hashtagArray[i]);
+  for (let i = 0; i < hashtagArray.length; i++) {
+    console.log(hashtagArray[i]);
   }
 });
 
@@ -50,38 +50,54 @@ const T = new Twit({
   timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
   strictSSL: true, // optional - requires SSL certificates to be valid.
 });
+
+// Obtener los tweets
+let params = { 
+  q     : 'banana since:2011-07-11',
+  count : 100 
+};
+
+T.get("search/tweets", params, gotData);
+
+function gotData(err, data, response) {
+  console.log(data);
+}
+
+
+
 //Buscar los hashtag que vienen del arreglo hashtag array
-const stream = T.stream("statuses/filter", { track: `#${hashtagArray}` });
+// const stream = T.stream("statuses/filter", { track: `#${hashtagArray}` });
+// const stream = T.stream("statuses/filter", { track: `#${hashtagArray}` });
 
 // Obtener informacion del tweet
-stream.on("tweet", function (tweet) {
-  console.log(tweet.text);
-  console.log(tweet.user.name);
-  console.log(tweet.user.screenname);
-  console.log(tweet.user.location);
-  console.log(tweet.user.description);
+// stream.on("tweet", function (tweet) {
+//   console.log(tweet.text);
+//   console.log(tweet.user.name);
+//   console.log(tweet.user.screenname);
+//   console.log(tweet.user.location);
+//   console.log(tweet.user.description);
 
-  // // Retweet
-  // T.post(
-  //   "statuses/retweet/:id",
-  //   { id: tweet.id_str },
-  //   function (err, data, response) {
-  //     if (err) {
-  //       console.log(err);
-  //     } else {
-  //       console.log(`Se hizo retweet al tweet: ${tweet.id_str}`);
-  //     }
-  //   }
-  // );
-  // T.post(
-  //   "favorites/create",
-  //   { id: tweet.id_str },
-  //   function (err, data, response) {
-  //     if (err) {
-  //       console.log(err);
-  //     } else {
-  //       console.log(`Se hizo favorito al tweet: ${tweet.id_str}`);
-  //     }
-  //   }
-  // );
-});
+// // Retweet
+// T.post(
+//   "statuses/retweet/:id",
+//   { id: tweet.id_str },
+//   function (err, data, response) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(`Se hizo retweet al tweet: ${tweet.id_str}`);
+//     }
+//   }
+// );
+// T.post(
+//   "favorites/create",
+//   { id: tweet.id_str },
+//   function (err, data, response) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(`Se hizo favorito al tweet: ${tweet.id_str}`);
+//     }
+//   }
+// );
+// });
